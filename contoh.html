@@ -27,7 +27,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&display=swap"
         rel="stylesheet">
 
-    <style> 
+    <!-- Untuk JQuery (Biar tooltipny berfungsi)-->
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+
+    <style>
         .open-sans-title {
             font-family: "Open Sans", sans-serif;
             font-optical-sizing: auto;
@@ -38,7 +47,7 @@
                 "wdth" 100;
         }
 
-         .oswald-title {
+        .oswald-title {
             font-family: "Oswald";
             font-optical-sizing: auto;
             font-weight: 400;
@@ -48,7 +57,7 @@
                 "wdth" 100;
         }
 
-         .bitcount-title {
+        .bitcount-title {
             font-family: "Bitcount Prop Double Ink";
             font-optical-sizing: auto;
             font-weight: 400;
@@ -56,12 +65,30 @@
             font-size: xx-large;
             font-variation-settings:
                 "wdth" 100;
-         }
-        
+        }
+
         .tocenter {
             text-align: center;
             font-size: x-large;
             border: 50px;
+        }
+
+        .mediabold {
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .subscribe-button:hover {
+            color: rgb(41, 118, 211);
+            border-radius: 200px;
+            height: 100px;
+            background-color: aliceblue;
+        }
+
+        .join-button:active {
+
+            background-color: rgb(0, 200, 100);
+
         }
 
         a:link {
@@ -81,34 +108,69 @@
 <body>
 
     <div class="jumbotron text-center">
-        <h1></h1>
-        <p>Testing</p>
+        <h1> Welcome to Bakery Picker</h1>
+        <h2> Website yang membantu anda dalam mencari menu maupun bakery yang sedang dituju </h2>
+        <p>Selamat Memilih Tujuan Bakery / Menu anda </p>
+        <button class="join-button"> JOIN NOW! </button>
     </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
-                <h3>Column 1</h3>
+            <div class="col 4">
+                <h3>Bakery 1</h3>
                 <p class="bitcount-title"> <b>Igor Bakery </b></p>
-                <a href="https://www.igors-pastry.com/sby" data-toggle="tooltip" title="Hooray!">Click this link</a>
+                <a href="https://www.igors-pastry.com/sby" data-toggle="tooltip" title="Pencet ini untuk mengecek di websitenya!" target="_blank">Click
+                    this link to check</a>
                 <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/c36a069c-402d-4314-84a8-4149936ef0cc_restaurant-image_1593449319550.jpg?auto=format"
                     class="img-fluid" alt="Igor's Bakery">
+                <button class="subscribe-button"> Beli Sekarang! </button>
             </div>
-            <div class="col-sm-4">
-                <h3>Column 2</h3>
+            <div class="col 4">
+                <h3>Bakery 2</h3>
                 <p class="bitcount-title"> <b>Bon Ami Bakery</b></p>
-                <a href="https://www.bonami.co.id/home.php" data-toggle="tooltip" title="Hooray!">Click this link</a>
+                <a href="https://www.bonami.co.id/home.php" data-toggle="tooltip" title="Pencet ini untuk mengecek di websitenya!" target="_blank">Click
+                    this link to check</a>
                 <img src="https://bonami.co.id/data/menu/Pastry/Cover.jpg" class="img-fluid" alt="Bon Ami">
             </div>
-            <div class="col-sm-4">
-                <h3>Column 3</h3>
+            <div class="col 4">
+                <h3>Bakery 3</h3>
                 <p class="bitcount-title"> <b>Laritta Bakery </b></p>
-                <a href="https://www.larittabakery.com/" data-toggle="tooltip" title="Hooray!">Click this link</a>
+                <a href="https://www.larittabakery.com/" data-toggle="tooltip" title="Pencet ini untuk mengecek di websitenya!" target="_blank">Click
+                    this link to check </a>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpNEy4BxmVBQnqOCFYWau7zsktC6X8o2Qrhg&s"
                     class="img-fluid" alt="Laritta Bakery">
             </div>
         </div>
     </div>
+
+    <div class="container tooltip">
+        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpNEy4BxmVBQnqOCFYWau7zsktC6X8o2Qrhg&s"
+            data-toggle="tooltip" title="Hooray!"> Apakah anda yakin untuk membeli? </a>
+    </div>
+
+    <div class="mediabold tocenter">
+        Pembuat Website: Saya sendiri
+        <br>
+        Pembuat Animasi: Saya sendiri
+        <br>
+        Credits: Bootstrap 4 W3Schools
+        <br>
+    </div>
+
+    <p>
+        <span>
+            Media Sosial Yg bisa dihubungi
+        </span>
+        <br>
+        @igors_pastry
+        <br>
+        @bonami_bakery
+        <br>
+        @laritta_bakery
+        <br>
+    </p>
+
+
 
 </body>
 
