@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Latihan JavaScript Fahmi</title>
+    <script>
+        function Validasi() {
+        
+            alert("PERINGATAN! ANDA SEDANG DI HACK!!! Segera AMANKAN DATA ANDA!!");
+
+            let siap = confirm("BENERAN MAU DIJAGA NIH DATANYA?!?!?!?");
+
+            if (siap) {
+                let nama;
+                let valid = false;
+
+                while (!valid) {
+                    nama = prompt("MASUKKAN NAMA ANDA! (Tanpa Angka):");
+
+                    if (nama === null) {
+                        alert("Akses dibatalkan. Anda akan masuk sebagai 'Guest' dengan fitur terbatas.");
+                        break;
+                    }
+
+                    
+                    if (nama.length < 2) {
+                        alert("Pesan Error: Nama/Inisial minimal harus 2 huruf!");
+                    }
+                    else if (/\d/.test(nama)) {
+                        alert("Pesan Error: Nama tidak boleh mengandung angka! (Contoh salah: " + nama + ")");
+                    }
+                    else {
+                        valid = true;
+                        alert("Data Terverifikasi! Selamat datang di JalaninAja, " + nama + ".\n\nUpdate Hari Ini: Hindari Jalan Teknik Kimia, ada genangan air!");
+
+                    
+                        console.log("User " + nama + " berhasil login ke sistem JalaninAja.");
+                    }
+                }
+            } else {
+                alert("Tetap waspada di jalan! Gunakan JalaninAja jika Anda butuh info TSA atau laporan real-time.");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <button onclick="Validasi()">TEKAN TOMBOL INI SEKARANG </button>
+
+
+</body>
+
+</html>
